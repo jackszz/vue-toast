@@ -5,8 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --inline-vue --name toast --dest lib src/components/index.js & node bin/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "lib/toast.umd.js",
+  "files": [
+    "src",
+    "lib/*.js",
+    "types/*.d.ts"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
