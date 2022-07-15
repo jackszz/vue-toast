@@ -12,7 +12,32 @@ npm run serve
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run build:lib
+
+```
+
+```javascript
+import Vue from 'vue'
+import VueToast from 'toast'
+Vue.use(VueToast)
+
+this.$toast({
+    message: 'message',
+    type: 'info' // default type
+})
+
+this.$toast({
+    message: 'message',
+    type: 'success'
+})
+this.$toast({
+    message: 'message',
+    type: 'warning'
+})
+this.$toast({
+    message: 'message',
+    type: 'error'
+})
 ```
 
 ### Lints and fixes files
